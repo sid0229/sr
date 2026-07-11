@@ -303,12 +303,19 @@ function initTabs() {
         }
       }
 
-      // 5. Scroll active tab pill into view horizontally
-      pill.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
-      });
+      // 5. Scroll active tab pill into view horizontally without shifting the page container
+      const tabsRow = pill.parentElement;
+      if (tabsRow) {
+        const pillLeft = pill.getBoundingClientRect().left - tabsRow.getBoundingClientRect().left + tabsRow.scrollLeft;
+        const pillWidth = pill.offsetWidth;
+        const containerWidth = tabsRow.offsetWidth;
+        const targetScrollLeft = pillLeft - (containerWidth / 2) + (pillWidth / 2);
+        
+        tabsRow.scrollTo({
+          left: targetScrollLeft,
+          behavior: 'smooth'
+        });
+      }
     });
   });
 }

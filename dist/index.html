@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-lelq73Rh.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BgNCkeKn.css">
+  <script type="module" crossorigin src="/assets/index-C1imefG3.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DHQf1cEt.css">
 </head>
 <body>
 
@@ -111,10 +111,26 @@
             </button>
           </div>
         </div>
-      </section>
+      <!-- Tab Navigation Row (Sticky, Horizontally Scrollable) -->
+      <div class="app-tabs-container">
+        <div class="app-tabs-row" id="app-tabs">
+          <button class="tab-pill active" data-target="ai-summary">
+            <span class="tab-icon">🤖</span> AI Summary
+          </button>
+          <button class="tab-pill" data-target="snapshot">
+            <span class="tab-icon">📊</span> Snapshot
+          </button>
+          <button class="tab-pill" data-target="compensation">
+            <span class="tab-icon">💰</span> Salary & Benefits
+          </button>
+          <button class="tab-pill" data-target="reviews-section">
+            <span class="tab-icon">💬</span> Reviews
+          </button>
+        </div>
+      </div>
 
       <!-- 2. AI Teacher Summary (Stacked for Mobile scanning) -->
-      <section class="section-container scroll-fade-in" id="ai-summary">
+      <section class="section-container scroll-fade-in tab-section active show" id="ai-summary">
         <div class="ai-summary-header">
           <div class="ai-header-left">
             <h2 class="section-title">AI Teacher Summary</h2>
@@ -167,7 +183,7 @@
       </section>
 
       <!-- 3. Workplace Snapshot (1-Column list, rating-first, moss labels) -->
-      <section class="section-container scroll-fade-in" id="snapshot">
+      <section class="section-container scroll-fade-in tab-section" id="snapshot">
         <h2 class="section-title">Workplace Snapshot</h2>
         <p class="section-subtitle">Visualizing key aspects of the teaching experience based on reviewer scores.</p>
         
@@ -247,7 +263,7 @@
       </section>
 
       <!-- 4 & 5. Combined Compensation & Benefits Dashboard -->
-      <section class="section-container" id="compensation">
+      <section class="section-container tab-section" id="compensation">
         <h2 class="section-title">Compensation & Benefits</h2>
         <p class="section-subtitle">Based on self-reported salaries and benefits from verified staff reviews.</p>
         
@@ -371,7 +387,7 @@
       </section>
 
       <!-- 6 & 7. Teacher Reviews & Filters -->
-      <section class="section-container" id="reviews-section">
+      <section class="section-container tab-section" id="reviews-section">
         <div class="reviews-header-block">
           <h2 class="section-title">Teacher Reviews</h2>
           <p class="section-subtitle">Real experiences shared anonymously by verified educators.</p>
